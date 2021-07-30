@@ -1,8 +1,9 @@
 <form class="text-center offset-2 col-8" style="color: #757575;">
   <div class="form-group" id="SkillBox">
-    <!-- <div class="search-hero">
-    <input class="form-control" type="text" name="search" [(ngModel)]="selectedPartner" autocomplete="off" placeholder="&#61442;  Start searching for a Product by id ....">
-</div> -->
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="selectedPartner" autocomplete="off"
+        placeholder="&#61442;  Start searching for a Post by Titre Description ....">
+    </div>
     <table class="table table-hover table-striped ">
       <caption>List of Posts</caption>
       <thead>
@@ -10,15 +11,15 @@
           <th scope="col">Index</th>
           <th scope="col">Titre</th>
           <th scope="col">Discription</th>
-          <th scope="col">Categories</th>
-          <th scope="col">date</th>
+          <th scope="col">Categorie</th>
+          <th scope="col">Date</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let post of registartions ;let i=index ">
+        <tr *ngFor="let post of registartions|search :selectedPartner ;let i=index ">
           <th scope="row">{{i+1}}</th>
-          <td scope="row">{{post.titre}}</td>
+          <td scope="row">{{post.titre| uppercase }}</td>
           <td scope="row">{{post.description}}</td>
           <td scope="row">{{post.categories}}</td>
           <td scope="row">{{post.date}}</td>

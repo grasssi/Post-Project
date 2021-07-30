@@ -24,7 +24,6 @@ export class UpdatePostComponent implements OnInit {
     const articleData = this.ArticleService.getPostByIndex(this.index);
     this.profileForm.patchValue(articleData)
     console.log(articleData);
-
   }
   updatePost() {
     this.submitted = true;

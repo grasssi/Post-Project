@@ -7,13 +7,15 @@ import { ListPostComponent } from './list-post/list-post.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPostComponent,
     AddPostComponent,
-    UpdatePostComponent
+    UpdatePostComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

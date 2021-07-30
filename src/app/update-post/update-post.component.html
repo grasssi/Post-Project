@@ -17,10 +17,10 @@
           [ngClass]="{'is-valid': submitted && !profileForm.controls.titre.errors ,'is-invalid': submitted && profileForm.controls.titre.errors}">
       </div>
 
-      <div  class="col-sm-4">
+      <div class="col-sm-4">
         <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.titre.hasError('required')">
           Vérifiez votre saisie</span>
-        </div>
+      </div>
     </div>
 
     <!-- description -->
@@ -32,49 +32,50 @@
         <input type="text" id="materialRegisterFormLastName" class="form-control" formControlName="description"
           [ngClass]="{'is-valid': submitted && !profileForm.controls.description.errors ,'is-invalid': submitted && profileForm.controls.description.errors}">
       </div>
-      <div  class="col-sm-4">
-      <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.description.hasError('required')">
-        Vérifiez votre saisie</span>
+      <div class="col-sm-4">
+        <span class="invalid-feedback d-block"
+          *ngIf="submitted && profileForm.controls.description.hasError('required')">
+          Vérifiez votre saisie</span>
       </div>
     </div>
 
     <!-- Categories -->
     <div class="row">
       <div class="col-sm-2">
-        <label for="materialRegisterFormEmail">Categories</label>
+        <label for="materialRegisterFormEmail">Categorie</label>
       </div>
       <div class="col-sm-4 ">
         <select name="subject" id="subject" formControlName="categories">
-         <option value="" selected="selected">Select Categorie</option>
-         <option value="Sport" >Sport</option>
-         <option value="Économie">Économie</option>
-         <option value="Société" >Société</option>
-         <option value="Culture" >Culture</option>
-       </select>
+          <option value="" selected="selected">Select Categorie</option>
+          <option value="Sport">Sport</option>
+          <option value="Économie">Économie</option>
+          <option value="Société">Société</option>
+          <option value="Culture">Culture</option>
+        </select>
       </div>
-      <div  class="col-sm-4">
-        <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.categories.hasError('required')">
+      <div class="col-sm-4">
+        <span class="invalid-feedback d-block"
+          *ngIf="submitted && profileForm.controls.categories.hasError('required')">
           Vérifiez votre saisie</span>
-        </div>
-        </div>
+      </div>
+    </div>
 
     <!-- date -->
     <div class="row">
-<div  class="col-sm-2">
-  <label for="materialRegisterFormPassword">date</label>
-</div>
-<div  class="col-sm-6">
-  <input type="date" id="materialRegisterFormPassword" class="col-6 form-control" formControlName="date"
-  aria-describedby="materialRegisterFormPasswordHelpBlock"
-  [ngClass]="{'is-valid': submitted && !profileForm.controls.date.errors ,'is-invalid': submitted && profileForm.controls.date.errors}">
-</div>
-<div  class="col-sm-4">
-  <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.date.hasError('required')">
-    Vérifiez votre saisie</span>
-  </div>
-    </div>>
-
+      <div class="col-sm-2">
+        <label for="materialRegisterFormPassword">Date</label>
+      </div>
+      <div class="col-sm-6">
+        <input type="date" id="materialRegisterFormPassword" class="col-6 form-control" formControlName="date"
+          aria-describedby="materialRegisterFormPasswordHelpBlock"
+          [ngClass]="{'is-valid': submitted && !profileForm.controls.date.errors ,'is-invalid': submitted && profileForm.controls.date.errors}">
+      </div>
+      <div class="col-sm-4">
+        <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.date.hasError('required')">
+          Vérifiez votre saisie</span>
+      </div>
+    </div>
     <!-- Save button -->
-    <button type="button" (click)='updatePost()' class="btn btn-info">Save</button>
+    <button type="button" (click)='updatePost()' class="btn btn-success">Save</button>
   </div>
 </form>
