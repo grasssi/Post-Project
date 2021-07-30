@@ -1,6 +1,10 @@
+@font-face {
+  font-family: lato;
+  src: url(../../assets/Sertig.otf) format("opentype");
+}
 #SkillBox {
   font-size: 20px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'lato', cursive;
   width: 95%;
   height: auto;
   margin: 40px auto;
@@ -21,33 +25,26 @@
 }
 .bg {
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("../../assets/img4.jpg");
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.descriptionModal{
-  background-image: url("/assets/img.jpg");
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+ }
+
 
 label {
 	cursor: pointer;
 	color: #3498db;
-	/* display: block;
+	display: block;
 	padding: 10px;
-	margin: 3px; */
+	margin: 3px;
 }
 
 input {
-  width: 40%;
+  width: 100%;
 
 }
 
@@ -55,4 +52,23 @@ input {
   margin-left: auto;
   margin-right: auto;
   width: 6em
+}
+
+
+/*Reset CSS*/
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Avenir, sans-serif;
+}
+
+
+.deroulant > a::after{
+  content:" ▼";
+  font-size: 12px;
+}
+
+.conteneur{
+margin: 50px 20px;
+height: 1500px;
 }
