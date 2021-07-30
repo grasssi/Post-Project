@@ -30,6 +30,6 @@ export class UpdatePostComponent implements OnInit {
     this.submitted = true;
     if (this.profileForm.invalid) { return };
     this.ArticleService.saveUpdate(this.index, this.profileForm.value);
-    this.router.navigate(['/listPosts'])
+    this.router.navigate(['/listPost'])
   }
 }

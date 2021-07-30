@@ -1,54 +1,78 @@
 <form [formGroup]="profileForm" class="text-center offset-2 col-8" style="color: #757575;">
 
-  <div class="form-group bg centered" id="SkillBox">
+  <div class="form-group bg containers" id="SkillBox">
     <div>
-      <p>My Post</p>
+      <p>My Posts</p>
       <img
         src="https://2.bp.blogspot.com/--aPlnH6X1YA/UEf7yeJ3gGI/AAAAAAAATgw/TgMK9IVzipk/s1600/Skills%2B-%2BPawan%2BMall.png"
         alt="Skill - Pawan Mall" />
     </div>
-    <div class="col ">
+    <div class="row">
       <!-- Titre -->
-      <div>
+      <div class="col-sm-2">
         <label for="materialRegisterFormFirstName">Titre</label>
+      </div>
+      <div class="col-sm-6 ">
         <input type="text" id="materialRegisterFormFirstName" class="form-control" formControlName="titre"
           [ngClass]="{'is-valid': submitted && !profileForm.controls.titre.errors ,'is-invalid': submitted && profileForm.controls.titre.errors}">
-        <div class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.titre.hasError('required')">
-          Vérifiez votre saisie</div>
       </div>
+
+      <div  class="col-sm-4">
+        <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.titre.hasError('required')">
+          Vérifiez votre saisie</span>
+        </div>
     </div>
-    <div class="col">
-      <!-- description -->
-      <div>
+
+    <!-- description -->
+    <div class="row">
+      <div class="col-sm-2">
         <label for="materialRegisterFormLastName">Description</label>
+      </div>
+      <div class="col-sm-6">
         <input type="text" id="materialRegisterFormLastName" class="form-control" formControlName="description"
           [ngClass]="{'is-valid': submitted && !profileForm.controls.description.errors ,'is-invalid': submitted && profileForm.controls.description.errors}">
-        <div class="invalid-feedback d-block"
-          *ngIf="submitted && profileForm.controls.description.hasError('required')">Vérifiez votre saisie
-        </div>
+      </div>
+      <div  class="col-sm-4">
+      <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.description.hasError('required')">
+        Vérifiez votre saisie</span>
       </div>
     </div>
 
-
     <!-- Categories -->
-    <div>
-      <label for="materialRegisterFormEmail">Categories</label>
-      <input type="text" id="materialRegisterFormEmail" class="form-control" formControlName="categories"
-        [ngClass]="{'is-valid': submitted && !profileForm.controls.categories.errors ,'is-invalid': submitted && profileForm.controls.categories.errors}">
-      <div class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.categories.hasError('required')">
-        Vérifiez votre saisie</div>
-    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <label for="materialRegisterFormEmail">Categories</label>
+      </div>
+      <div class="col-sm-4 ">
+        <select name="subject" id="subject" formControlName="categories">
+         <option value="" selected="selected">Select Categorie</option>
+         <option value="Sport" >Sport</option>
+         <option value="Économie">Économie</option>
+         <option value="Société" >Société</option>
+         <option value="Culture" >Culture</option>
+       </select>
+      </div>
+      <div  class="col-sm-4">
+        <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.categories.hasError('required')">
+          Vérifiez votre saisie</span>
+        </div>
+        </div>
 
     <!-- date -->
-    <div>
-      <label for="materialRegisterFormPassword">date</label>
-      <input type="date" id="materialRegisterFormPassword" class="form-control" formControlName="date"
-        aria-describedby="materialRegisterFormPasswordHelpBlock"
-        [ngClass]="{'is-valid': submitted && !profileForm.controls.date.errors ,'is-invalid': submitted && profileForm.controls.date.errors}">
-      <div class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.date.hasError('required')">
-        Vérifiez votre saisie</div>
-
-    </div>
+    <div class="row">
+<div  class="col-sm-2">
+  <label for="materialRegisterFormPassword">date</label>
+</div>
+<div  class="col-sm-6">
+  <input type="date" id="materialRegisterFormPassword" class="col-6 form-control" formControlName="date"
+  aria-describedby="materialRegisterFormPasswordHelpBlock"
+  [ngClass]="{'is-valid': submitted && !profileForm.controls.date.errors ,'is-invalid': submitted && profileForm.controls.date.errors}">
+</div>
+<div  class="col-sm-4">
+  <span class="invalid-feedback d-block" *ngIf="submitted && profileForm.controls.date.hasError('required')">
+    Vérifiez votre saisie</span>
+  </div>
+    </div>>
 
     <!-- Save button -->
     <button type="button" (click)='updatePost()' class="btn btn-info">Save</button>
