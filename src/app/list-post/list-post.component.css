@@ -1,10 +1,14 @@
+@font-face {
+  font-family: lato;
+  src: url(../../assets/Sertig.otf) format("opentype");
+}
 #SkillBox {
   font-size: 20px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'lato', cursive;
   width: 95%;
   height: auto;
   margin: 40px auto;
-  background-color: #fff;
+
   border: 1px solid #cdcdcd;
   padding: 10px;
   border-radius:20px;
@@ -12,6 +16,11 @@
   -webkit-border-radius:20px;
   -ms-border-radius:20px;
   -moz-border-radius:20px;
+   background-color: #D8F0DA;
+   min-width: 100%;
+  position: relative;
+  opacity: 0.97;
+  background: transparent;
 }
 #SkillBox img {
   width: 20%;
@@ -21,9 +30,9 @@
 }
 .bg {
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("../../assets/img4.jpg");
   /* Full height */
-  height: 100%;
+  height: auto;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -38,3 +47,34 @@
   background-size: cover;
 }
 
+button{
+  margin: 2px;
+}
+/* table{
+  vertical-align: middle;
+  width : "20%"
+} */
+.transparent{
+  background-color: #ffffff;
+  opacity: 0.4;
+ }
+ #MainTable {
+  width: 100%;
+  background-color: #D8F0DA;
+  border: 1px;
+  min-width: 100%;
+  position: relative;
+  opacity: 0.97;
+  background: transparent;
+}
+.exemple {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .2rem;
+
+  /* margin-top: 100px; */
+  }
+
+
+/* table table-hover table-striped */

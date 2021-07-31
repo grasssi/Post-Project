@@ -55,12 +55,12 @@ input {
 }
 
 
-/*Reset CSS*/
+/* Reset CSS
 *{
   margin: 0px;
   padding: 0px;
   font-family: Avenir, sans-serif;
-}
+} */
 
 
 .deroulant > a::after{
@@ -71,4 +71,7 @@ input {
 .conteneur{
 margin: 50px 20px;
 height: 1500px;
+}
+select{
+  width: 100%;
 }

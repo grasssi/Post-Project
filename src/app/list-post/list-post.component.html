@@ -1,34 +1,37 @@
-<form class="text-center offset-2 col-8" style="color: #757575;">
+<form class="text-center offset-2 col-8 bg" style="color: #757575;">
   <div class="form-group" id="SkillBox">
     <div class="search-hero">
       <input class="form-control" type="text" name="search" [(ngModel)]="selectedPartner" autocomplete="off"
         placeholder="&#61442;  Start searching for a Post by Titre Description ....">
     </div>
-    <table class="table table-hover table-striped ">
-      <caption>List of Posts</caption>
-      <thead>
-        <tr class="table-info">
-          <th scope="col">Index</th>
-          <th scope="col">Titre</th>
-          <th scope="col">Discription</th>
-          <th scope="col">Categorie</th>
-          <th scope="col">Date</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let post of registartions|search :selectedPartner ;let i=index ">
-          <th scope="row">{{i+1}}</th>
-          <td scope="row">{{post.titre| uppercase }}</td>
-          <td scope="row">{{post.description}}</td>
-          <td scope="row">{{post.categories}}</td>
-          <td scope="row">{{post.date}}</td>
-          <td>
-            <button type="button" [routerLink]="['/UpdatePost',i]" class="btn btn-info">Update</button>
-            <button class="btn btn-danger" (click)="onDelete(i)">Suprimer</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="offset-2 col-8">
+      <table class="table table-hover table-striped exemple" aria-placeholder="5">
+        <caption>List of Posts</caption>
+        <thead class="bg-info">
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Discription</th>
+            <th scope="col">Categorie</th>
+            <th scope="col">Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of registartions|search :selectedPartner ;let i=index ">
+            <th scope="row">{{i+1}}</th>
+            <td scope="row">{{post.titre| uppercase }}</td>
+            <td scope="row">{{post.description}}</td>
+            <td scope="row">{{post.categories}}</td>
+            <td scope="row">{{post.date}}</td>
+            <td>
+              <button type="button" [routerLink]="['/UpdatePost',i]" class="btn btn-info"><i
+                  class="bi bi-hurricane"></i></button>
+              <button class="btn btn-danger" (click)="onDelete(i)"><i class="bi bi-trash-fill"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </form>
